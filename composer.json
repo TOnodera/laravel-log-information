@@ -1,0 +1,28 @@
+{
+    "name": "tonod/log-information",
+    "description": "laravel用ログ監視ツールです。",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tonod\\LogInformation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "t.onodera",
+            "email": "t.onodera.1.2.1.5@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tonod\\LogInformation\\Providers\\LogInformationProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.6",
+        "phpunit/phpunit": "^9.5"
+    }
+}
