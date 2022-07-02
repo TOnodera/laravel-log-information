@@ -4,8 +4,13 @@ namespace Tests;
 
 use \Orchestra\Testbench\TestCase;
 
-class TestWorkOrchestraTestBench extends TestCase
+class WorkOrchestraTestBench extends TestCase
 {
+    /**
+     * @test
+     *
+     * @return void
+     */
     public function test()
     {
         $this->assertTrue(true);

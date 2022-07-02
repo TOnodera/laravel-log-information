@@ -12,7 +12,7 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="Cors Test Suite">
+        <testsuite name="LogInformation Tests">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

@@ -4,8 +4,13 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 
-final class StackTest extends TestCase
+final class PhpUnit extends TestCase
 {
+    /**
+     * @test
+     *
+     * @return void
+     */
     public function testPushAndPop(): void
     {
         $this->assertTrue(true);
