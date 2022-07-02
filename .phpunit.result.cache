@@ -1,1 +1,1 @@
-{"version":1,"defects":{"StackTest::testPushAndPop":3},"times":{"StackTest::testPushAndPop":0.002}}
+{"version":1,"defects":{"StackTest::testPushAndPop":3},"times":{"StackTest::testPushAndPop":0.002,"Tests\\StackTest::testPushAndPop":0.001}}

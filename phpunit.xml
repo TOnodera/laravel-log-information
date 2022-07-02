@@ -16,4 +16,7 @@
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <env name="APP_KEY" value="base64:sJKw4dLo8+aCz8QZmP9jwbmFYGtUJ7qz01uBUdiszYg="/>
+    </php>
 </phpunit>

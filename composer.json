@@ -23,6 +23,12 @@
     },
     "require-dev": {
         "orchestra/testbench": "^7.6",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "nunomaduro/collision": "^6.2"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
     }
 }
