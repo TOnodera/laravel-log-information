@@ -1,5 +1,4 @@
-<?php
-
+<?php declare(strict_types=1);
 namespace Tonod\LogInformation\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

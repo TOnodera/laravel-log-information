@@ -1,10 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 namespace Tonod\LogInformation\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 
 class GetLogController extends Controller
 {
