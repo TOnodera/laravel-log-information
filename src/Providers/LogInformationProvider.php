@@ -1,5 +1,4 @@
-<?php
-
+<?php declare(strict_types=1);
 namespace Tonod\LogInformation\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -23,6 +22,6 @@ class LogInformationProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/api.php');
     }
 }
