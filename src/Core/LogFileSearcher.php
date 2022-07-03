@@ -3,7 +3,7 @@ namespace Tonod\LogInformation\Core\LogFileSearcher;
 
 use Exception;
 use Illuminate\Support\Collection;
-use Tonod\LogInformation\Core\Types\LogConfig;
+use Tonod\LogInformation\Core\LogConfig;
 use Tonod\LogInformation\Exceptions\ApplicationException;
 
 class LogFileSearcher
@@ -26,11 +26,12 @@ class LogFileSearcher
      * @return array
      * @throws ApplicationException
      */
-    public function getLogFileDirs(): array
+    public function getLogFileDirs(): Collection
     {
         $defaultChannel = $this->logConfig->getDefaultChannel();
         $logDirs = null;
-        $channels = Collection::make($this->logConfig->getChannels());
+
+        $channels = $this->logConfig->getChannels();
         if ($defaultChannel === 'stack') {
             $filePaths = $channels->map(function ($channel) {
                 return $channel['path'];
@@ -38,13 +39,13 @@ class LogFileSearcher
             $logDirs = $filePaths->map(function ($path) {
                 return pathinfo($path)['dirname'];
             });
+            return $logDirs;
         }
+
         $logDirs = $channels->filter(function ($channel) use ($defaultChannel) {
             return $defaultChannel === $channel;
         });
 
-        return $logDirs
-            ? $logDirs->toArray()
-            : throw new ApplicationException();
+        return $logDirs ?? throw new ApplicationException();
     }
 }
